@@ -1,18 +1,21 @@
 resource "google_compute_instance" "terraform" {
-  project      = "rd-gcp-kads"
-  name         = "rd-create-instance-kads"
-  machine_type = "e2-standard-2"
-  zone         = "us-central1-a"
-  metadata_startup_script = "startup.sh"
+  project      = var.project_id
+  name         = var.name
+  machine_type = var.machine_type
+  zone         = var.zone
+  metadata_startup_script = var.metadata_startup_script
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = var.image
     }
   }
   network_interface {
-    network = "new-network"
-    subnetwork = "sub-of-newnetwork"
+    #network = "new-network"
+    #subnetwork = "sub-of-newnetwork"
+    network = modules.Network.VPC
+    subnetwork = modules.Network.Subnet
     access_config {
     }
+
   }
 }
