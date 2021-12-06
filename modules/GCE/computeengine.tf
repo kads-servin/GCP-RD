@@ -10,10 +10,9 @@ resource "google_compute_instance" "terraform" {
     }
   }
   network_interface {
-    #network = "new-network"
-    #subnetwork = "sub-of-newnetwork"
-    network = modules.Network.VPC
-    subnetwork = modules.Network.Subnet
+    network = var.vpc_name
+    subnetwork = var.subnet_name
+
     access_config {
     }
 
