@@ -1,7 +1,7 @@
 resource "google_compute_instance" "terraform" {
   project      = "rd-gcp-kads"
   name         = "rd-create-instance-kads"
-  machine_type = "n1-standard-1"
+  machine_type = "e2-standard-2"
   zone         = "us-central1-a"
   boot_disk {
     initialize_params {
