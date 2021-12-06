@@ -9,7 +9,8 @@ resource "google_compute_instance" "terraform" {
     }
   }
   network_interface {
-    network = "default"
+    network = "new-network"
+    subnetwork = "sub-of-newnetwork"
     access_config {
     }
   }
