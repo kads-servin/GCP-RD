@@ -27,3 +27,6 @@ variable "vpc_name" {
 variable "subnet_name" {
     default = "new-network"
 }
+variable "metadata_startup_script" {
+    default = "startup.sh"
+}
