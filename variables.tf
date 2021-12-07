@@ -35,3 +35,15 @@ variable "ip_cidr_range" {
 variable "region" {
     default = "us-central1"
 }
+
+variable "firewall_name" {
+    default = "rd-gcp-firewall"
+}
+
+variable "firewall_protocol" {
+    default = "tcp"
+}
+
+variable "firewall_port" {
+    default = "22"
+}

@@ -5,6 +5,9 @@ module "create_vpc"{
     subnet_name = var.subnet_name 
     ip_cidr_range = var.ip_cidr_range
     region = var.region
+    firewall_name = var.firewall_name
+    firewall_protocol = var.firewall_protocol
+    firewall_port = var.firewall_port
 }
 
 module "create_gce"{

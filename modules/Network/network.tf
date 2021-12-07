@@ -23,3 +23,14 @@ output "VPC"{
 output "Subnet"{
     value = google_compute_subnetwork.sub-of-newnetwork.name
 }
+
+resource "google_compute_firewall" "ssh-access" {
+  name    = var.firewall_name
+  network = var.vpc_name
+
+  allow {
+    protocol = var.firewall_protocol
+    ports    = [var.firewall_port]
+ }
+  depends_on = [google_compute_network.new-network]
+}
