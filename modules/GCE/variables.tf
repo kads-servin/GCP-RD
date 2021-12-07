@@ -14,19 +14,17 @@ variable "zone" {
     default = "us-central1-a"
 }
 
-variable "metadata_startup_scrip" {
-    default = "startup.sh"
-}
 variable "image" {
-    default = "ubuntu-1804-lts"
+    default = "ubuntu-os-cloud/ubuntu-2004-lts"
 }
 variable "vpc_name" {
     default = "new-network"
 }
 
 variable "subnet_name" {
-    default = "new-network"
+  default = "sub-of-newnetwork"
 }
-variable "metadata_startup_script" {
-    default = "startup.sh"
+
+variable "startup_script" {
+  default = "modules/GC/startup.sh"
 }

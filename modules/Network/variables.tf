@@ -7,7 +7,7 @@ variable "vpc_name" {
 }
 
 variable "subnet_name" {
-    default = "new-network"
+    default = "sub-of-newnetwork"
 }
 
 variable "ip_cidr_range" {
@@ -19,7 +19,7 @@ variable "region" {
 }
 
 variable "firewall_name" {
-    default = "rd-gcp-firewall"
+    default = "rd-gcp-ssh-access"
 }
 
 variable "firewall_protocol" {
@@ -29,5 +29,13 @@ variable "firewall_protocol" {
 variable "firewall_port" {
     default = "22"
 }
+variable "target_tags" {
+    default = "demo-vm-instance"
+}
+variable "source_ranges" {
+    default = "0.0.0.0/0"
+}
 
-
+variable "startup_script" {
+    default = "starup-sh"
+}
