@@ -16,4 +16,5 @@ module "create_gce"{
     image = var.image
     vpc_name = var.vpc_name
     subnet_name = var.subnet_name 
+    depends_on = [module.create_vpc]
 }
