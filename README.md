@@ -62,3 +62,4 @@ cat message.txt
 |-------------------|
 |  Karen Dominguez  |
 
+![Key-Factors](https://user-images.githubusercontent.com/78040799/145109198-32d281a7-e9d5-4de6-aff3-dc8f5bd6ad7d.png)
