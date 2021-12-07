@@ -1,6 +1,7 @@
 # CUSTOM NETWORK AND VIRTUAL MACHINE SCRIPT
 
-This terraform modules provides a mechanism to store a virtual machine with his network and subnet also in the startup install cowsay and save the output in a file
+This terraform repository create a virtual machine with his network and subnet.
+also in the startup install cowsay and save the output in a file
 
 ## Compatibility
 
