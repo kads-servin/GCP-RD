@@ -7,7 +7,7 @@ This terraform modules provides a mechanism to store a virtual machine with his 
 This module is meant for use with Terraform v1.0.11 and + provider registry.terraform.io/hashicorp/google v4.2.1
 
 
-# Goals
+## Goals
 
 The script initializes the network and subnet then initializes the creation of the virtual machine once the virtual machine was created when you login on the ssh the cowsay program is going to start to install and is going to generate a file in tmp directory.
 
@@ -21,7 +21,7 @@ The region is defined as a us-central1 and also the zone is us-central1-a
 When the machine startup the cowsay program will be install and you can find a message in /tmp
 
 
-# Executing program
+## Executing program
 
 You need to create a Service Account in GCP
 After that generate the key using json and import this key where the main.tf file is
@@ -33,13 +33,13 @@ git clone https://github.com/kads-servin/GCP-RD.git
 Once you must clone the project go to file > open folder and open the folder that you already import in visual studio
 Now that you have created the service account and the key you are able to perform the script
 ```bash
-sudo terraform init
+terraform init
 ```
 ```bash
-sudo terraform plan
+terraform plan
 ```
 ```bash
-sudo terraform apply
+terraform apply
 ```
 
 Once the apply is done, go to the GCP console and move to compute engine > VM Instances and you would be able to see the VM
@@ -57,6 +57,6 @@ ls -ltrh
 ```bash
 cat message.txt
 ```
-Authors
+#Authors
 Karen Dominguez
 
