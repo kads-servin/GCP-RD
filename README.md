@@ -57,6 +57,8 @@ ls -ltrh
 ```bash
 cat message.txt
 ```
-#Authors
-Karen Dominguez
+# Authors
+|        Name       |
+|-------------------|
+|  Karen Dominguez  |
 
