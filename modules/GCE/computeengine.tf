@@ -1,6 +1,6 @@
 resource "google_compute_instance" "terraform" {
   project      = var.project_id
-  name         = var.name
+  name         = lower(var.name)
   machine_type = var.machine_type
   zone         = var.zone
   metadata = {

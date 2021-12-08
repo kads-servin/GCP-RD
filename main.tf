@@ -21,3 +21,15 @@ module "create_gce" {
   subnet_name  = var.subnet_name
   depends_on   = [module.create_vpc]
 }
+
+#module "create_gce_2" {
+  #source       = "./modules/GCE"
+  #project_id   = var.project_id
+  #name         = "VM-2"
+  #machine_type = var.machine_type
+  #zone         = var.zone
+  #image        = var.image
+  #vpc_name     = var.vpc_name
+  #subnet_name  = var.subnet_name
+  #depends_on   = [module.create_vpc]
+#}
