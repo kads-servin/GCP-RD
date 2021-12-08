@@ -3,12 +3,9 @@ resource "google_compute_instance" "terraform" {
   name         = var.name
   machine_type = var.machine_type
   zone         = var.zone
- metadata_startup_script = <<-EOT
- #!/bin/bash
- sudo apt update
- sudo apt -y install cowsay
- udo /usr/games/cowsay "Look My Cowsay" | sudo tee /tmp/menssage.txt
-EOT
+  metadata = {
+  startup-script = file("${path.module}/startup.sh")
+  }
   tags = ["demo-vm-instance"]
   boot_disk {
     initialize_params {

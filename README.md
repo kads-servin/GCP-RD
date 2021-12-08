@@ -30,8 +30,8 @@ You need to clone the project in visual studio
 ```bash
 git clone https://github.com/kads-servin/GCP-RD.git
 ```
-Once you must clone the project go to file > open folder and open the folder that you already import in visual studio
-Now that you have created the service account and the key you are able to perform the script
+Once you have import they key where the main.tf file is you are ready to execute it performing the below steps:  
+
 ```bash
 terraform init
 ```
@@ -42,9 +42,9 @@ terraform plan
 terraform apply
 ```
 
-Once the apply is done, go to the GCP console and move to compute engine > VM Instances and you would be able to see the VM
-Click on SSH button to initializes the virtual Machine
-once you are login go to tmp directory to see the message file
+Now you will be able to to see the VM Instances on the GCP console  moving to Cumpute Engine  
+Click on SSH button to startup the virtual Machine 
+To see the message file go to /tmp/message.txt  
 
 ```bash
 cd /tmp
