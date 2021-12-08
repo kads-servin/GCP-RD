@@ -1,15 +1,15 @@
 # CUSTOM NETWORK AND VIRTUAL MACHINE SCRIPT
 
-This terraform modules provides a mechanism to store a virtual machine with his network and subnet also in the startup install cowsay and save the output in a file
+This terraform modules provides a mechanism to store a virtual machine with his network also in the startup install cowsay and save the output in a file
 
 ## Compatibility
 
-This module is meant for use with Terraform v1.0.11 and + provider registry.terraform.io/hashicorp/google v4.2.1
+This module is meant for use with Terraform v1.0.11 and  provider registry.terraform.io/hashicorp/google v4.2.1
 
 
 ## Goals
 
-The script initializes the network and subnet then initializes the creation of the virtual machine once the virtual machine was created when you login on the ssh the cowsay program is going to start to install and is going to generate a file in tmp directory.
+The script create the network then create  the virtual machine once the virtual machine was created when you login on the ssh the cowsay program is going to start to install and is going to generate a file in tmp directory.
 
 
 ## Limits

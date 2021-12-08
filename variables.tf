@@ -29,7 +29,7 @@ variable "vpc_name" {
 
 variable "ip_cidr_range" {
     default = "10.1.0.0/21"
-    description = "Ip assigned"
+    description = "Range"
 }
 
 variable "region" {
@@ -62,7 +62,7 @@ variable "source_ranges" {
 
 variable "startup_script" {
     default = "starup-sh"
-    description = "Allow to perform ssh"
+    description = "connect via ssh"
 }
 variable "subnet_name" {
     default = "sub-of-newnetwork"
