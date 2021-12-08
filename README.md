@@ -1,3 +1,4 @@
+![Key-Factors](https://user-images.githubusercontent.com/78040799/145109198-32d281a7-e9d5-4de6-aff3-dc8f5bd6ad7d.png)
 # CUSTOM NETWORK AND VIRTUAL MACHINE SCRIPT
 
 This terraform modules provides a mechanism to store a virtual machine with his network also in the startup install cowsay and save the output in a file
