@@ -6,14 +6,14 @@ resource "google_service_account" "service_account" {
 
 resource "google_project_iam_member" "pubsub-role" {
   project = var.project_id
-  role    = var.pubsub-role
+  role    = "roles/pubsub.editor"
   member  = "serviceAccount:${google_service_account.service_account.email}"
 
 }
 
 resource "google_project_iam_member" "storage-role" {
   project = var.project_id
-  role    = var.storage-role
+  role    = "roles/storage.objectAdmin"
   member  = "serviceAccount:${google_service_account.service_account.email}"
 
 }
