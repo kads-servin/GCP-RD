@@ -33,6 +33,6 @@ variable "subnet_name" {
 }
 
 variable "service_account" {
-  default = "service_account"
+  default = "service-account"
   description = "Name of the service account"
 }
