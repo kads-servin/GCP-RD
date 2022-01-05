@@ -4,6 +4,25 @@ resource "google_service_account" "service_account" {
   project      = var.project_id
 }
 
+resource "google_project_iam_member" "pubsub-role" {
+  project = var.project_id
+  role    = var.pubsub-role
+  member  = "serviceAccount:${google_service_account.service_account.email}"
+
+}
+
+resource "google_project_iam_member" "storage-role" {
+  project = var.project_id
+  role    = var.storage-role
+  member  = "serviceAccount:${google_service_account.service_account.email}"
+
+}
+
+resource "google_service_account_key" "key" {
+  service_account_id = google_service_account.service_account.name
+
+}
+
 resource "google_compute_instance" "terraform" {
   project      = var.project_id
   name         = lower(var.name)
@@ -31,4 +50,7 @@ resource "google_compute_instance" "terraform" {
     email  = google_service_account.service_account.email
     scopes = ["cloud-platform"]
   }
+
+
+
 }
